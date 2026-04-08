@@ -1,0 +1,65 @@
+body {
+    font-family: Georgia;
+    text-align: center;
+}
+
+.h_left,
+.h_right {
+    background-color: #388E3C;
+    color: white;
+    height: 100px;
+}
+
+.h_left {
+    width: 20%;
+    float: left;
+}
+
+.h_right {
+    width: 80%;
+    float: right;
+}
+
+.main {
+    clear: both;
+    display: flex;
+}
+
+.s_left,
+.s_right {
+    background-color: #DCE775;
+    width: 50%;
+    height: 600px;
+}
+
+.footer {
+    background-color: #388E3C;
+    color: white;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    border: dashed 2px #388E3C;
+}
+
+table img {
+    height: 70px;
+}
+
+a {
+    color: #388E3C;
+    margin: 20px;
+    font-style: italic;
+    font-size: 200%;
+}
+
+p {
+    margin: 0%;
+}
+
+a:hover {
+    background-color: #388E3C;
+    color: #DCE775;
+}
+

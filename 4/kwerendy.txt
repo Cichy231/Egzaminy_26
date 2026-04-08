@@ -1,0 +1,8 @@
+1. SELECT maturzysta.id, maturzysta.imie, maturzysta.nazwisko FROM maturzysta WHERE maturzysta.szkola = "T3";
+2. SELECT DISTINCT arkusz.przedmiot FROM arkusz;
+3. SELECT MAX(arkusz.rok), MIN(arkusz.rok) FROM arkusz;
+4. SELECT maturzysta.id, AVG(wynik.punkty) AS "Wynik" FROM maturzysta JOIN wynik ON 
+   maturzysta.id = wynik.maturzysta_id GROUP BY maturzysta.id ORDER BY AVG(wynik.punkty) DESC LIMIT 1;
+5. SELECT arkusz.rok, arkusz.sesja, arkusz.przedmiot, wynik.punkty FROM arkusz 
+    JOIN wynik ON arkusz.symbol = wynik.symbol JOIN maturzysta ON 
+    wynik.maturzysta_id = maturzysta.id WHERE maturzysta.id = 31;

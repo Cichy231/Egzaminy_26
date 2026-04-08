@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pola figur</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header class="header">
+        <h2>Pola figur płaskich</h2>
+    </header>
+
+    <main class="main">
+        <nav class="nav">
+            <h3>MENU</h3>
+            <ol>
+                <li><a href="index.html">Prostokąt i trójkąt</a></li>
+                <li><a href="kolo.html">Okrąg i koło</a></li>
+            </ol>
+        </nav>
+
+        <section class="section">
+            <img src="1d.bmp" alt="Figura" id="obrazek"><br>
+
+            <img src="1m.bmp" alt="Wybierz trójkąt" class="figury" onclick="zamien('1d.bmp')">
+            <img src="2m.bmp" alt="Wybierz prostokąt" class="figury" onclick="zamien('2d.bmp')">
+        </section>
+
+        <aside class="aside">
+            <h3>Pole prostokąta / pole trójkąta</h3>
+
+            <label for="bok1">Bok prostokąta / podstawa trójkąta</label><br>
+            <input type="number" name="bok1" id="a"><br>
+
+            <label for="bok2">Drugi bok prostokąta / wysokość trójkąta</label><br>
+            <input type="number" name="bok2" id="b"<br>
+
+            <button type="button" onclick="oblicz()">Oblicz</button>
+            <p id="wynik"></p>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <p>Autor: Jarosław Bania</p>
+    </footer>
+    <script src="js.js"></script>
+</body>
+</html>
