@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatuaże</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header class="header_left">
+        <img src="logo.png" alt="salon">
+    </header>
+
+    <header class="header_right">
+        <h1>Studio Tatuażu</h1>
+    </header>
+
+    <section class="section" id="section">
+        <h2>Galeria</h2>
+        <img src="smok.png" alt="smok.png" class="miniatury">
+        <img src="koliber.png" alt="koliber.png" class="miniatury">
+    </section>
+
+    <aside class="aside">
+        <h3>Dodaj wzór</h3>
+        <label for="plik">Wzór:</label><br>
+        <input type="file" name="plik" id="plik" accept=".png"><br>
+
+        <label for="kolor">Kolor:</label><br>
+        <select name="kolor" id="kolor">
+            <option value="Czarny">Czarny</option>
+            <option value="Czerwony">Czerwony</option>
+            <option value="Zielony">Zielony</option>
+            <option value="Niebieski">Niebieski</option>
+        </select><br>
+
+        <label for="cena">Cena:</label><br>
+        <input type="number" name="cena" id="cena"><br>
+
+        <button type="button" onclick="wzor()">Dodaj Wzór</button>
+    </aside>
+
+    <footer class="footer">
+        <p>Autor strony: Jarosław Bania</p>
+    </footer>
+    
+    <script>
+        function wzor() {
+            let wzor = document.getElementById("plik").value;
+            let kolor = document.getElementById("kolor").value;
+            let cena = document.getElementById("cena").value;
+
+            let nazwa = wzor.split(/[/\\]/).pop();
+
+            alert("Wzór: " + nazwa + ", kolor " + kolor + " w cenie " + cena + " zł");
+
+            let section = document.getElementById("section");
+            let obraz = document.createElement("img");
+            obraz.src = nazwa;
+            obraz.alt = nazwa
+            obraz.className = 'miniatury';
+            section.appendChild(obraz);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+1. SELECT tatuaze.wzor, tatuaze.cena FROM tatuaze WHERE tatuaze.kolor 
+   LIKE "czarny" AND tatuaze.cena > 100 ORDER BY tatuaze.cena DESC;
+2. SELECT tatuaze.kolor, COUNT(*) FROM tatuaze GROUP BY tatuaze.kolor;
+3. SELECT tatuaze.wzor, style.nazwa FROM tatuaze JOIN style ON tatuaze.style_id = style.id WHERE tatuaze.kolor LIKE "zielony";
+4. UPDATE tatuaze SET tatuaze.cena = tatuaze.cena * 1.1 WHERE tatuaze.kolor LIKE "czerwony";
